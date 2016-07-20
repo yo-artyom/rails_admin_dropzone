@@ -20,8 +20,6 @@ Gem::Specification.new do |s|
   s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency "simple_form", "~> 3.2"
-  s.add_dependency "jquery-rails", [">= 3.0", "< 5"]
   s.add_dependency "dropzonejs-rails", "~> 0.7.3"
 
   s.add_development_dependency "rails", [">= 4.0", "< 5"]

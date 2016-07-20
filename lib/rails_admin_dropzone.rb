@@ -1,4 +1,3 @@
-require "simple_form"
 require "rails_admin_dropzone/engine"
 
 module RailsAdminDropzone

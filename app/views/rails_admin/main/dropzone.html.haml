@@ -4,7 +4,7 @@
 :javascript
   $(document).on('rails_admin.dom_ready', function() {
     // disable auto discover
-    Dropzone.autoDiscover = true;
+    Dropzone.autoDiscover = false;
     if ($(".dropzone").length){
       var dropzone = new Dropzone (".dropzone", {
         maxFilesize: 256, // Set the maximum file size to 256 MB
@@ -25,5 +25,4 @@
     }
   });
 
-= simple_form_for(rails_admin.dropzone_url(@abstract_model.to_param, id: @object.id), html: { class: 'dropzone', multipart: true }) do |f|
-  = f.input :id, :as => :hidden, :input_html => { :name => "id", :value => @object.id }
+= form_tag rails_admin.dropzone_url(@abstract_model.to_param, id: @object.id), class: 'dropzone', multipart: true
